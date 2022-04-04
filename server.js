@@ -7,6 +7,13 @@ app.get('/greeting/:name', (req, res) => {
     
 })
 
+app.get('/tip/:total/:tipPercentage', (req, res) => {
+    res.send(`${parseInt(req.params.total) * parseFloat(req.params.tipPercentage)}`) //works with ".20"
+    
+})
+
+
+
 app.listen(3000, () => {
     console.log("we are on port 3000")
 })
